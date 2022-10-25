@@ -8,9 +8,10 @@ import {UsersService} from './users.service'
 })
 export class AppComponent {
   title = 'zadanie-rekrutacyjne';
+  doggos = [];
   constructor(private user: UsersService) {
     this.user.getData().subscribe(data => {
-      console.warn(data)
+      console.log(data)
     })
   }
 }
